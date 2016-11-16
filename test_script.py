@@ -34,17 +34,17 @@ for n in range(1,151):
 #            error_predict += 1
 #    print("The number of correct out of 100 is ", correct_predict, "for ", n, " training data")
     y.append(correct_predict)
-    if n % 5 == 0:
-        y1.append(correct_predict)
+#    if n % 5 == 0:
+#        y1.append(correct_predict)'''
     correct_predict = 0
 #    error_predict = 0
 
 
 x = np.arange(n)
-x1 = np.arange(0, n, 5)
+#x1 = np.arange(0, n, 5)
 
 m, b = np.polyfit(x,y,1)
-m1, b1 = np.polyfit(x1,y1,1)
+#m1, b1 = np.polyfit(x1,y1,1)
 
 plt.scatter(x, y)
 plt.title('Number of Correct Prediction (out of 100) v. Number of Training Data')
