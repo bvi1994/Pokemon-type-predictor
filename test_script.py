@@ -17,7 +17,7 @@ y1 = []
 # n = 10
 
 for n in range(1,151):
-    training_set = train.train_type_tree(n) # Grab n data points for our training set
+    training_set = train.train_type(n) # Grab n data points for our training set
     for m in range(100):
         random_index = int(random.random() * 801)
         while random_index == 0:

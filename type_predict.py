@@ -2,67 +2,14 @@
 # using decision trees from the sklearn library
 
 from sklearn import tree
-from sklearn import neural_network
-from sklearn import naive_bayes
 from sys import argv
 import numpy as np
 import csv
 from random import randint
 import warnings
 
-def train_type_bayes(training_points):
-    data_set = open('Pokemon.csv')
-    pokemonFile = csv.reader(data_set)
-    pokemonData = list(pokemonFile)
-    length = len(pokemonData)
-
-    X = []
-    Y = []
-#    Pokemon = []
-
-    for _ in range(training_points):
-        row = randint(1, length - 1)
-        X.append(pokemonData[row][6:11])
-        Y.append(pokemonData[row][2])
-        X = [[int(x) for x in sublist] for sublist in X]
-  
-    data_set.close()
-    clf = naive_bayes.GaussianNB()
-    clf = clf.fit(X,Y)
-#   prediction = clf.predict([[atk, defense, spec_atk, spec_def, speed]])
-
-    warnings.filterwarnings("ignore", category=DeprecationWarning)
-    # This is to get rid of the warnings the Ski-learn likes to print to. 
-    return clf
-
-
-def train_type_network(training_points):
-    data_set = open('Pokemon.csv')
-    pokemonFile = csv.reader(data_set)
-    pokemonData = list(pokemonFile)
-    length = len(pokemonData)
-
-    X = []
-    Y = []
-#    Pokemon = []
-
-    for _ in range(training_points):
-        row = randint(1, length - 1)
-        X.append(pokemonData[row][6:11])
-        Y.append(pokemonData[row][2])
-        X = [[int(x) for x in sublist] for sublist in X]
-  
-    data_set.close()
-    clf = neural_network.MLPClassifier()
-    clf = clf.fit(X,Y)
-#   prediction = clf.predict([[atk, defense, spec_atk, spec_def, speed]])
-
-    warnings.filterwarnings("ignore", category=DeprecationWarning)
-    # This is to get rid of the warnings the Ski-learn likes to print to. 
-    return clf
-
 # script, atk, defense, spec_atk, spec_def, speed = argv
-def train_type_trees(training_points):
+def train_type(training_points):
     data_set = open('Pokemon.csv')
     pokemonFile = csv.reader(data_set)
     pokemonData = list(pokemonFile)
