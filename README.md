@@ -14,3 +14,8 @@ The purpose is to see if there are any connections to Pokemon Bast Stats v. Poke
 
 # Relevant Files
 
+* Pokemon.csv - CSV file of Pokemon species and their corresponding stats. Source of the csv file can be found on Kaggle through [this link](https://www.kaggle.com/abcsds/pokemon) **Last Accessed: November 5, 2016**
+
+* test_script.py - This serves as the main.py of the file. Basically this files selects a random row of the csv file and grabs the relevant information. 
+
+* type_predict.py
