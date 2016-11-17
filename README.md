@@ -16,6 +16,10 @@ The purpose is to see if there are any connections to Pokemon Bast Stats v. Poke
 
 * Pokemon.csv - CSV file of Pokemon species and their corresponding stats. Source of the csv file can be found on Kaggle through [this link](https://www.kaggle.com/abcsds/pokemon) **Last Accessed: November 5, 2016**
 
-* test_script.py - This serves as the main.py of the file. Basically this files selects a random row of the csv file and grabs the relevant information. 
+* test_script.py - This serves as the main.py of the file. Basically this files selects a random row of the csv file and grabs the relevant information. Then does a comparision if the predicted type matches the correct type. If it's correct, the correct counter goes up by one. The script then plots the number of Pokemon predicted correctly against the number of training data.
 
-* type_predict.py
+* type_predict.py - Does the actual predicting of Pokemon types using Sklearn's decision tree algorithm. 
+
+# Analysis
+
+
